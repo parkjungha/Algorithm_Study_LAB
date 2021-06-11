@@ -1,8 +1,9 @@
 class Solution:
 	def subsetXORSum(self, nums: List[int]) -> int:
         
-		allSubset = []
+		allSubset = [] # 모든 subset을 저장할 list
 		ans = 0
+
 		for i in range(len(nums)+1):
 			for j in combinations(nums,i): 
 				allSubset.append(j)
