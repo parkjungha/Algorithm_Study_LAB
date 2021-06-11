@@ -41,4 +41,4 @@ minheap, maxheap=[],[]
 while n>0:
     n-=1
     insert(minheap,maxheap,int(input()()))
-    print(-maxheap[0])
+    print(-maxheap[0]) # 최대 힙의 첫번째 값s
