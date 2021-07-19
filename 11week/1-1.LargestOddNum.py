@@ -1,3 +1,4 @@
+# 시간이 관건 !!!
 
 # 막 풀었더니 시간초과 뜬 것
 def largestOddNumber_(num):

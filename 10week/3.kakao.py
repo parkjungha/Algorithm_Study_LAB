@@ -23,7 +23,7 @@ def solution(n, build_frame):
 
         if how == 1: # 설치
             answer.append([x,y,what])
-            if check(answer) == False:
+            if check(answer) == False: # 만약 작업을 수행한 결과가 조건을 만족하지 않는다면 해당 작업은 무시
                 answer.remove([x,y,what])
         
         else: # 삭제
