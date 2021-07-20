@@ -8,7 +8,7 @@ N,M,X = map(int,input().split())
 inf = 10000000000
 graph = [[] for _ in range(N)]
 
-
+# 노드의 개수가 n이고 시작노드가 x이고 graph가 주어질 때, 노드 x로부터 다른 n-1개의 노드까지의 최단거리가 담긴 dist 리스트를 반환하는 함수
 def dijkstra(n,x,graph):
     dist = [inf]*n # 무한대로 거리 초기화
     dist[x] = 0 # 시작점은 거리 0
