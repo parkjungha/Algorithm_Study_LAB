@@ -17,9 +17,9 @@ stop1, stop2 = map(int, input().split())
 
 def dijkstra(start, end):
     dist = [inf]*N
-    dist[start] = 0
+    dist[start-1] = 0
     q = []
-    heapq.heappush(q, [0, start])
+    heapq.heappush(q, [0, start-1])
 
     while q:
         cost, pos = heapq.heappop(q)
@@ -30,12 +30,12 @@ def dijkstra(start, end):
                 dist[p] = c
                 heapq.heappush(q, [c,p])
 
-    return dist[end]
+    return dist[end-1]
 
 # 경로1 -> stop1 -> stop2 -> N
-path1 = dijkstra(0, stop1-1) + dijkstra(stop1-1, stop2-1) + dijkstra(stop2-1, N-1)
+path1 = dijkstra(1, stop1) + dijkstra(stop1, stop2) + dijkstra(stop2, N)
 # 경로2 -> stop2 -> stop1 -> N
-path2 = dijkstra(0, stop2-1) + dijkstra(stop2-1, stop1-1) + dijkstra(stop1-1, N-1)
+path2 = dijkstra(1, stop2) + dijkstra(stop2, stop1) + dijkstra(stop1, N)
 
 if path1 >= inf and path2 >= inf:
     print(-1)
