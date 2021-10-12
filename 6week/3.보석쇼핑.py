@@ -1,3 +1,4 @@
+# ["DIA", "RUBY", "RUBY", "DIA", "DIA", "EMERALD", "SAPPHIRE", "DIA"]	
 def solution(gems):
     unique = list(set(gems))
     i = 0  # start 
